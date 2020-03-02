@@ -12,12 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_h8314.mk \
-                     $(LOCAL_DIR)/aosp_h8324.mk
-
+PRODUCT_MAKEFILES := \
+	$(LOCAL_DIR)/hentai_apollo_RoW.mk \
+	$(LOCAL_DIR)/hentai_apollo_DSDS.mk
+  
 COMMON_LUNCH_CHOICES += \
-    aosp_h8314-eng \
-    aosp_h8314-userdebug \
-    aosp_h8324-eng \
-    aosp_h8324-userdebug
-
+    hentai_apollo_RoW-eng \
+    hentai_apollo_RoW-userdebug \
+    hentai_apollo_RoW-user \
+    hentai_apollo_DSDS-eng \
+    hentai_apollo_DSDS-userdebug \
+    hentai_apollo_DSDS-user 
