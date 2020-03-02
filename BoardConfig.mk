@@ -15,9 +15,9 @@
 include device/sony/tama/PlatformConfig.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := unknown
-ifneq (,$(filter %h8314,$(TARGET_PRODUCT)))
+ifneq (,$(filter %hentai_apollo_RoW,$(TARGET_PRODUCT)))
 TARGET_BOOTLOADER_BOARD_NAME := H8314
-else ifneq (,$(filter %h8324,$(TARGET_PRODUCT)))
+else ifneq (,$(filter %hentai_apollo_DSDS,$(TARGET_PRODUCT)))
 TARGET_BOOTLOADER_BOARD_NAME := H8324
 else
 TARGET_BOOTLOADER_BOARD_NAME := H8314
@@ -28,6 +28,16 @@ endif
 PRODUCT_PLATFORM := tama
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=apollo
+
+#Use Clang instead of Gcc 4.9
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_CLANG_VERSION := r353983c
+
+#kernel
+BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_SOURCE := kernel/sony/msm-4.14/kernel
+TARGET_NEEDS_DTBOIMAGE := false
 
 # Partition information
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
