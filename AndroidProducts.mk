@@ -14,12 +14,20 @@
 
 PRODUCT_MAKEFILES := \
 	$(LOCAL_DIR)/hentai_apollo_RoW.mk \
-	$(LOCAL_DIR)/hentai_apollo_DSDS.mk
-  
+	$(LOCAL_DIR)/hentai_apollo_DSDS.mk \
+	$(LOCAL_DIR)/hentai_apollo_RoW_Go.mk \
+	$(LOCAL_DIR)/hentai_apollo_DSDS_Go.mk \
+	
 COMMON_LUNCH_CHOICES += \
     hentai_apollo_RoW-eng \
     hentai_apollo_RoW-userdebug \
     hentai_apollo_RoW-user \
     hentai_apollo_DSDS-eng \
     hentai_apollo_DSDS-userdebug \
-    hentai_apollo_DSDS-user 
+    hentai_apollo_DSDS-user \
+    hentai_apollo_RoW_Go-eng \
+    hentai_apollo_RoW_Go-userdebug \
+    hentai_apollo_RoW_Go-user \
+    hentai_apollo_DSDS_Go-eng \
+    hentai_apollo_DSDS_Go-userdebug \
+    hentai_apollo_DSDS_Go-user \
